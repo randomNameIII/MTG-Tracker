@@ -62,6 +62,16 @@ function useHoldButton(onAction) {
 
 // --- Main Application ---
 export default function App() {
+  useEffect(() => {
+    // Automatically inject Tailwind CSS so formatting works anywhere (like GitHub Pages)
+    if (!document.getElementById('tailwind-cdn')) {
+      const script = document.createElement('script');
+      script.id = 'tailwind-cdn';
+      script.src = 'https://cdn.tailwindcss.com';
+      document.head.appendChild(script);
+    }
+  }, []);
+
   const [numPlayers, setNumPlayers] = useState(4);
   const [startingLife, setStartingLife] = useState(DEFAULT_STARTING_LIFE);
   const [players, setPlayers] = useState(() => 
