@@ -336,7 +336,7 @@
                 </button>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                  <div className={`absolute top-16 sm:top-20 text-3xl font-black px-4 py-1.5 rounded-full shadow-lg backdrop-blur-md bg-black/40 transition-all duration-300 z-10 ${showDelta ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-4'} ${lifeDelta > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  <div className={`absolute top-24 sm:top-28 text-3xl font-black px-4 py-1.5 rounded-full shadow-lg backdrop-blur-md bg-black/40 transition-all duration-300 z-10 ${showDelta ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-4'} ${lifeDelta > 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {lifeDelta > 0 ? `+${lifeDelta}` : lifeDelta}
                   </div>
                   <span className="text-[25vw] sm:text-9xl font-black tracking-tighter drop-shadow-md leading-none mt-4">{player.life}</span>
@@ -347,14 +347,14 @@
                 </button>
               </div>
 
-              <div className="absolute top-0 left-0 right-0 h-16 flex items-start justify-center z-40 pt-2 bg-gradient-to-b from-black/50 to-transparent pointer-events-none">
+              <div className="absolute top-0 left-0 right-0 h-24 flex items-start justify-center z-40 pt-8 bg-gradient-to-b from-black/50 to-transparent pointer-events-none">
                 <button className="p-2.5 rounded-full bg-black/40 backdrop-blur-md pointer-events-auto active:scale-95 transition-transform shadow-md border border-white/10" onClick={() => setMenuOpen(!isMenuOpen)}>
                   {isMenuOpen ? <ChevronUp size={28} className="opacity-90 text-white" /> : <ChevronDown size={28} className="opacity-90 text-white" />}
                 </button>
               </div>
 
               {isMenuOpen && (
-                <div className="absolute inset-0 z-30 bg-black/95 p-3 pt-16 flex flex-col pointer-events-auto shadow-inner">
+                <div className="absolute inset-0 z-30 bg-black/95 p-3 pt-24 flex flex-col pointer-events-auto shadow-inner">
                   <div className="flex justify-between items-center mb-2 pb-1 border-b border-white/10 shrink-0">
                     <h3 className="font-bold text-sm flex items-center gap-2 text-white">
                       <div className={`w-3 h-3 rounded-full ${player.color.bg} border ${player.color.border}`}></div>
